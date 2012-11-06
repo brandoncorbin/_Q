@@ -1,32 +1,42 @@
 Cookies
+--------
 Mmmm.. Cookies. Getting, Setting, Erasing and Checking. Example: Click see how many times you have been to this page.
 
+
+**Sets a cookie**
 _Q.cookie.set(name, value, expires_in_days)
-Sets a cookie
 
+**Gets a cookie by name**
 _Q.cookie.get(name)
-Gets a cookie by name
 
+**Deletes a cookie by name**
 _Q.cookie.erase(name)
-Deletes a cookie by name
 
+**See if a cookie exists**
 _Q.cookie.exists(name)
 Returns true or false if a cookie exists or not
 
 Visitor
+-------
 
 Website Visitor details with Javascript - including Browsers, OS, Unique ID and Client Side storage (even with IE)
 
+**What browser**
 _Q.visitor.browser()
 Returns the name of the Browser - Firefox, Chrome, Safari, IE6, IE7, IE8 Try it
 
+**What OS**
 _Q.visitor.os()
 Returns the name of the visitors OS Try it
 
+**Get UID for current User**
 _Q.visitor.uid()
-Returns an a unique ID for the current visitor Try it
-Visitor.Storage
+Returns an a unique ID for the current visitor 
+
+**Visitor.Storage**
+
 A simple yet powerful method for storing client side encoded (base64) data. Each item is presented as its own cookie, so a limit of 200 items and no more than 4k per item.
+
 _Q.visitor.storage.set(key,value)
 Saves the key and value as an encoded cookie
 
