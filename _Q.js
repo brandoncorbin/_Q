@@ -4,8 +4,9 @@
 script: _q.js
 description: The core 
 license: MIT-style license.
-version 0.5
-author: Brandon Corbin http://icorbin.com http://underscoreq.com
+version 0.6
+lastupdated: Nov, 6th 2012
+author: Brandon Corbin http://github.com/brandoncorbin/_Q
 
   
 ...
@@ -44,14 +45,14 @@ var _Q = {
 		// end get
 		// Erase a Cookie
 		erase: function(name) {
-			this.set(name, "", -1);
+			_Q.cookie.set(name, "", -1);
 		},
 		delete: function(name) {
-			this.erase(name);
+			_Q.cookie.erase(name);
 		},
 		// Check if a cookie exists
 		exists: function(name) {
-			if (this.get(name) != null) {
+			if (_Q.cookie.get(name) != null) {
 				return true;
 			} else {
 				return false;
@@ -119,13 +120,11 @@ var _Q = {
 		},
 		// Get a unique ID for this visitor. (last a year)
 		uid: function() {
-			var cookie = _Q.cookie;
-			var text = _Q.string;
-			if (cookie.exists('_qvid')) {
-				return cookie.get('_qvid');
+			if (_Q.cookie.exists('_qvid')) {
+				return _Q.cookie.get('_qvid');
 			} else {
-				var qvid = text.createUUID();
-				cookie.set('_qvid', qvid, 300);
+				var qvid = _Q.string.createUUID();
+				_Q.cookie.set('_qvid', qvid, 300);
 				return qvid;
 			}
 		} // End UID

@@ -22,15 +22,21 @@ Visitor
 Website Visitor details with Javascript - including Browsers, OS, Unique ID and Client Side storage (even with IE)
 
 **What browser**
+
 _Q.visitor.browser()
+
 Returns the name of the Browser - Firefox, Chrome, Safari, IE6, IE7, IE8 Try it
 
 **What OS**
+
 _Q.visitor.os()
+
 Returns the name of the visitors OS Try it
 
 **Get UID for current User**
+
 _Q.visitor.uid()
+
 Returns an a unique ID for the current visitor 
 
 **Visitor.Storage**
