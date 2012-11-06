@@ -1,19 +1,35 @@
+_Q (_Quick) Simply Javascript Tools
+====================
+
 Cookies
 --------
 Mmmm.. Cookies. Getting, Setting, Erasing and Checking. Example: Click see how many times you have been to this page.
 
 
 **Sets a cookie**
+
+```javascript
 _Q.cookie.set(name, value, expires_in_days)
+```
 
 **Gets a cookie by name**
+
+```javascript
 _Q.cookie.get(name)
+```
 
 **Deletes a cookie by name**
+
+```javascript
 _Q.cookie.erase(name)
+```
 
 **See if a cookie exists**
+
+```javascript
 _Q.cookie.exists(name)
+```
+
 Returns true or false if a cookie exists or not
 
 Visitor
@@ -23,19 +39,25 @@ Website Visitor details with Javascript - including Browsers, OS, Unique ID and 
 
 **What browser**
 
+```javascript
 _Q.visitor.browser()
+```
 
 Returns the name of the Browser - Firefox, Chrome, Safari, IE6, IE7, IE8 Try it
 
 **What OS**
 
+```javascript
 _Q.visitor.os()
+```
 
 Returns the name of the visitors OS Try it
 
 **Get UID for current User**
 
+```javascript
 _Q.visitor.uid()
+```
 
 Returns an a unique ID for the current visitor 
 
@@ -43,10 +65,16 @@ Returns an a unique ID for the current visitor
 
 A simple yet powerful method for storing client side encoded (base64) data. Each item is presented as its own cookie, so a limit of 200 items and no more than 4k per item.
 
+```javascript
 _Q.visitor.storage.set(key,value)
+```
+
 Saves the key and value as an encoded cookie
 
+```javascript
 _Q.visitor.storage.get(key)
+```
+
 Returns the value of the visitors datastore for the given key, will return null if its not set
 
 _Q.visitor.storage.remove(key)
