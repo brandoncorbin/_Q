@@ -146,6 +146,8 @@ Returns a decoded Base64 String
 
 ```javascript
 _Q.string.contains(needle, haystack, is_case_sensitive)
+```
+
 Returns an True of False if text Contains the needle
 
 **Generate Unique String**
@@ -156,11 +158,15 @@ _Q.string.random(6)
 
 Generates alpha-numeric case sensitive unique string
 
+**Create a URL friendly version of a string**
+
 ```javascript
 _Q.string.urlformat(string)
 ```
 
 Take a string like "This Is a Good Day" and returns "this-is-a-good-day"
+
+**Trim whitespace from the beginning and end of a string**
 
 ```javascript
 _Q.string.trim(string)
@@ -168,22 +174,23 @@ _Q.string.trim(string)
 
 Removes white space from a string and returns it
 
+**Trim whitespace from the left side of a string**
+
 ```javascript
 _Q.string.ltrim(string)
 ```
 
-Removes white space from the left side of a string and returns it
+**Trim whitespace from the right side of a string**
 
 ```javascript
 _Q.string.rtrim(string)
 ```
 
-Removes white space from the right side of a string 
 
 _Q.number
 --------
 
-**Working with dollar formats**
+**Add Commas to 1,000**
 
 ```javascript
 _Q.number.comma(num)
@@ -191,9 +198,10 @@ _Q.number.comma(num)
 
 Returns the a number with the 1000 comma.
 
+**Convert number to dollar format**
+
 ```javascript
 _Q.number.dollar(num)
 ```
 
-Returns a dollar formated version of a number
 
