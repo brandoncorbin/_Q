@@ -61,125 +61,139 @@ _Q.visitor.uid()
 
 Returns an a unique ID for the current visitor 
 
-**Visitor.Storage**
+Visitor.Storage
+-----------
 
 A simple yet powerful method for storing client side encoded (base64) data. Each item is presented as its own cookie, so a limit of 200 items and no more than 4k per item.
+
+**Save a key + value**
 
 ```javascript
 _Q.visitor.storage.set(key,value)
 ```
 
-Saves the key and value as an encoded cookie
+**Get a value from a key**
 
 ```javascript
 _Q.visitor.storage.get(key)
 ```
 
-Returns the value of the visitors datastore for the given key, will return null if its not set
+**Remove Storage**
 
 _Q.visitor.storage.remove(key)
 Removes a value from the visitors storage
 
-_Q.visitor.storage.show()
-Shows a table containing the current visitos data Try it
 
-Validate
+_Q.URL
+-----
 
-Super straight forward methods for validating email, phone, zipcodes and if someone is human
-
-_Q.validate.email(email_address)
-Returns the true if its a valid email address, false if not
-Email Validate
-
-_Q.validate.phone(phonenumber)
-Returns the true if its a valid phone number, false if not
-Phone Number  Validate
-
-_Q.validate.zipcode(zip_code)
-Returns the true if its a valid US zip code, false if not
-Postal Code  Validate
-
-_Q.validate.human()
-Returns the true if its a the user is Human, using a confirmation alert
-Validate your Humanness
-
-URL
 Using javascript to read URL variables
 
+**Get current URL**
+
+```javascript
 _Q.url.get()
+```
+
 Returns the full URL for the current site
 
-_Q.url.param(name)
-Gets a URL variable (param) by the name, if it doesn't exist it will return an empty string
 
+**Get URL Parameter**
+
+```javascript
+_Q.url.param(name)
+```
+
+Gets a URL variable (param) by the name, if it doesn't exist it will return an empty string. Example: what.html?name=Tonka  _Q.url.param('name') would equal Tonka
+
+**Get ALL Url params as an array**
+
+```javascript
 _Q.url.params()
+```
+
 Returns an Array of the current URL parameters
 
+**Get Base URL**
+
+```javascript
 _Q.url.base()
+```
+
 Returns an string containing the base URL
 
-TEXT
+String
+-------
+
 Encoding and decoding Text using base64, Simple searching, unique IDs, URL formated text and trimming
 
-_Q.text.encode(str)
+**Base64 Encode a string**
+
+```javascript
+_Q.string.encode(str)
+```
 Returns a BASE64 encoded version of the string
 
-_Q.text.decode(encoded_str)
+**Base64 Decode a String**
+
+```javascript
+_Q.string.decode(encoded_str)
+```
+
 Returns a decoded Base64 String
 
-_Q.text.contains(needle, haystack, is_case_sensitive)
+**Quick Text Find**
+
+```javascript
+_Q.string.contains(needle, haystack, is_case_sensitive)
 Returns an True of False if text Contains the needle
 
-_Q.text.createUUID()
-Returns a 32 character long Unique ID - Try it
+**Generate Unique String**
 
-_Q.text.urlformat(string)
+```javascript
+_Q.string.random(6)
+```
+
+Generates alpha-numeric case sensitive unique string
+
+```javascript
+_Q.string.urlformat(string)
+```
+
 Take a string like "This Is a Good Day" and returns "this-is-a-good-day"
 
-_Q.text.trim(string)
+```javascript
+_Q.string.trim(string)
+```
+
 Removes white space from a string and returns it
 
-_Q.text.ltrim(string)
+```javascript
+_Q.string.ltrim(string)
+```
+
 Removes white space from the left side of a string and returns it
 
-_Q.text.rtrim(string)
-Removes white space from the right side of a string and returns it
+```javascript
+_Q.string.rtrim(string)
+```
 
-Script
-Dynamically load the Javascript library of choice
+Removes white space from the right side of a string 
 
-_Q.script.load(script_url, callback_function)
-Dynamically loads a Javascript file, then does the call back function once its loaded
+_Q.number
+--------
 
-_Q.script.remove(script_url)
-Dynamically Removes a Javascript file
+**Working with dollar formats**
 
-_Q.script.load_jQuery(callback_function)
-Dynamically loads the jQuery Framework, then does the call back function once its being loaded
-
-_Q.script.load_jQueryUI(callback_function)
-Dynamically loads the jQueryUI Framework, then does the call back function once its being loaded
-
-_Q.script.load_prototype(callback_function)
-Dynamically loads the Prototype Framework, then does the call back function once its being loaded
-
-_Q.script.load_scriptaculous(callback_function)
-Dynamically loads the Scriptaculous Framework, then does the call back function once its being loaded
-
-_Q.script.load_mootools(callback_function)
-Dynamically loads the MooTools Framework, then does the call back function once its being loaded
-
-Number
-Working with dollar formats
-
+```javascript
 _Q.number.comma(num)
+```
+
 Returns the a number with the 1000 comma.
 
+```javascript
 _Q.number.dollar(num)
+```
+
 Returns a dollar formated version of a number
 
-Functions
-Working with existing functions - specifically knowing when a function is called, and taking an action
-
-_Q.func.inject("FunctionName", callback)
-When FunctionName is triggered - the callback argument will be called first.

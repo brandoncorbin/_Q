@@ -359,6 +359,7 @@ var _Q = {
 				_Q.cookie.set('_qdb', _Q.string.encode(JSON.stringify(this.data)));
 			};
 			this.loaded = true;
-		}
+		},
+		
 	},
 };
